@@ -9,7 +9,7 @@ const Banner = () => {
                     <p className="text-lg mb-10 px-1 lg:px-80">Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding problems to become an exceptionally well world-class Programmer.</p>
                     <div className="flex gap-5 items-center justify-center">
                         <button className="btn rounded-3xl px-8 border-none bg-green-400 text-xl font-semibold"><a
-                            href="#ticket-interface">Explore Now</a></button>
+                            >Explore Now</a></button>
                         <button className="btn btn-outline rounded-3xl px-8 border text-white border-white text-xl font-semibold">Our Feedback</button>
                     </div>
                 </div>
