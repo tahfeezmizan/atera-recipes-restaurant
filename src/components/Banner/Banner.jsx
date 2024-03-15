@@ -1,7 +1,7 @@
 
 const Banner = () => {
     return (
-        <div className="w-full md:w-3/4 lg:w-8/12 mx-auto pb-12 px-4 lg:px-0">
+        <div className="w-full md:w-3/4 lg:w-8/12 mx-auto pb-12 px-4 lg:px-0 mb-14">
             <div className="slider bg-img rounded-3xl h-[400px] lg:h-[600px]  flex flex-col items-center justify-center">
                 {/* banner text container  */}
                 <div className="text-center text-white ">
