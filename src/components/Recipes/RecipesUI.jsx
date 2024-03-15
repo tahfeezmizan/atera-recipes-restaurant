@@ -1,6 +1,6 @@
 
 const RecipesUI = ({ recipe }) => {
-    const { recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = recipe
+    const { recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = recipe;
     return (
         <div>
             <div id="post-container" className="w-full lg:w-7/12 flex flex-col gap-10">

@@ -13,7 +13,7 @@ const Recipes = () => {
     }, [])
 
     return (
-        <div className='gap-10'>
+        <div className=''>
             {
                 recipes.map(reci => <RecipesUI key={reci.recipe_id} recipe={reci}></RecipesUI>)
             }
