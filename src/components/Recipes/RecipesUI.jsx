@@ -16,7 +16,7 @@ const RecipesUI = ({ recipe }) => {
                             <h4 className='text-lg font-medium mb-4'>Ingredients: {ingredients.length}</h4>
                             <ul className="list-inside fira-sans text-lg text-gray-400 pl-2">
                                 {
-                                    ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)
+                                    // ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)
                                 }
                             </ul>
                         </div>
