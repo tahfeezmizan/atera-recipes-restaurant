@@ -3,7 +3,7 @@ const RecipesUI = ({ recipe }) => {
     const { recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = recipe;
     return (
         <div>
-            <div id="post-container" className="w-full lg:w-7/12 flex flex-col gap-10">
+            <div className="">
                 <div className="card w-96 bg-white border border-gray-200">
                     <figure className="p-6">
                         <img src={recipe_image} alt="Shoes" className="rounded-xl" />
@@ -16,14 +16,26 @@ const RecipesUI = ({ recipe }) => {
                             <h4 className='text-lg font-medium mb-4'>Ingredients: {ingredients.length}</h4>
                             <ul className="list-inside fira-sans text-lg text-gray-400 pl-2">
                                 {
-                                    // ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)
+                                    ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)
                                 }
                             </ul>
                         </div>
                         <hr />
                         <div className="flex gap-4 py-5">
-                            <h4 className='fira-sans text-base text-gray-400'>{preparing_time} minutes</h4>
-                            <h4 className='fira-sans text-base text-gray-400'>{calories} calories</h4>
+                            <div className='flex gap-2'>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                                <p className="fira-sans text-base text-gray-400">{preparing_time} minutes</p>
+                            </div>
+
+                            <div className='flex gap-2'>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+
+                                <p className="fira-sans text-base text-gray-400">{calories} calories</p>
+                            </div>
                         </div>
                         <button className="btn rounded-3xl px-6 border-none bg-green-400 text-lg font-medium"><a
                         >Explore Now</a></button>

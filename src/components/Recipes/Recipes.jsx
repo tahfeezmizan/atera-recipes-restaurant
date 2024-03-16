@@ -13,7 +13,7 @@ const Recipes = () => {
     }, [])
 
     return (
-        <div className=''>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
             {
                 recipes.map(reci => <RecipesUI key={reci.recipe_id} recipe={reci}></RecipesUI>)
             }
