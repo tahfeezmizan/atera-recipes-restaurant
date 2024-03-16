@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Banner from './components/Banner/Banner'
 import Header from './components/Header/Header'
 import Cooking from './components/Recipes/Cooking'
@@ -9,20 +7,21 @@ import Recipes from './components/Recipes/Recipes'
 import RecipesTitle from './components/Recipes/RecipesTitle'
 import RecipesUI from './components/Recipes/RecipesUI'
 import Currentlycooking from './components/Recipes/Currentlycooking';
+import toast from 'react-hot-toast';
 
 
 function App() {
   const [cookItem, setCookItem] = useState([]);
-  
+
   //add to cook function
   const handleAddToCook = recipes => {
     const isExist = cookItem.find(item => item.recipe_id == recipes.recipe_id);
     if (!isExist) {
       const newRecipes = [...cookItem, recipes];
       setCookItem(newRecipes)
+      toast.success("Recipes Added Successfully")
     } else {
-      // alert('Alrady Exits')
-      toast.error('Aleready Extis')
+      toast.error('Recipe Aleready Added');
     }
   }
 
