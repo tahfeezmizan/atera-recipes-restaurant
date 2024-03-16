@@ -33,7 +33,6 @@ const Cooking = ({ cookItem }) => {
                     </tbody>
                 </div>
 
-
                 <h2 className="text-2xl font-semibold pb-4 border-b border-black my-8 mx-10">Currently cooking: {currentlyCooked.length}</h2>
                 <div className="overflow-x-auto">
                     <thead className="table">
