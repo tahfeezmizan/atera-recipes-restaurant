@@ -13,8 +13,15 @@ function App() {
   const [cookItem, setCookItem] = useState([])
 
   const handleAddToCook = recipes => {
-    const newRecipes = [...cookItem, recipes];
-    setCookItem(newRecipes)
+    const isExist = cookItem.find(item => item.recipe_id == recipes.recipe_id);
+    if (!isExist) {
+      const newRecipes = [...cookItem, recipes];
+      setCookItem(newRecipes)
+    }else{
+      alert('Alrady Exits')
+    }
+
+
   }
 
   return (
