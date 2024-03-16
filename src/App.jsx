@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './App.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Banner from './components/Banner/Banner'
 import Header from './components/Header/Header'
 import Cooking from './components/Recipes/Cooking'
@@ -17,11 +19,10 @@ function App() {
     if (!isExist) {
       const newRecipes = [...cookItem, recipes];
       setCookItem(newRecipes)
-    }else{
-      alert('Alrady Exits')
+    } else {
+      // alert('Alrady Exits')
+      toast.error('Aleready Extis')
     }
-
-
   }
 
   return (
