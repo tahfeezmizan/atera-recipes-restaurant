@@ -1,14 +1,18 @@
 
-const SingleRecipe = ({ cookItem}) => {
+const SingleRecipe = ({ cookItem, idx, handleCurrentlyCooking, preparingBtn }) => {
     const { recipe_name, preparing_time, calories } = cookItem;
-    return (
-        <div className="flex gap-2 justify-around items-center rounded bg-gray-100 p-5">
-            <p className="text-base ">{recipe_name}</p>
-            <p className="text-base ">{preparing_time}</p>
-            <p className="text-base ">{calories}</p>
-            <button className="btn rounded-3xl px-4 border-none bg-green-400 text-base font-medium">Preparing</button>
 
-        </div>
+    return (
+        <tr className="fira-sans flex gap-4 text-start items-center justify-center py-4">
+            <th>{idx + 1}</th>
+            <td>{recipe_name}</td>
+            <td>{preparing_time} minutes</td>
+            <td>{calories} calories</td>
+            {preparingBtn &&
+                <td>
+                    <button onClick={() => handleCurrentlyCooking(cookItem)} className="btn rounded-3xl px-4 border-none bg-green-400 text-base font-medium">Preparing</button>
+                </td>}
+        </tr>
     );
 };
 
