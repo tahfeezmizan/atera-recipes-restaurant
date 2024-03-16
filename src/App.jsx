@@ -10,7 +10,12 @@ import RecipesUI from './components/Recipes/RecipesUI'
 
 function App() {
 
-  const [cart, setCart] = useState()
+  const [cookItem, setCookItem] = useState([])
+
+  const handleAddToCook = recipes => {
+    const newRecipes = [...cookItem, recipes];
+    setCookItem(newRecipes)
+  }
 
   return (
     <>
@@ -21,8 +26,8 @@ function App() {
       <div className="w-full lg:w-11/12 xl:w-8/12 mx-auto px-4 md:px-6 lg:px-0">
         {/* w-full lg:w-7/12 */}
         <div className="flex gap-10 justify-between border border-red-700">
-          <Recipes ></Recipes>
-          <Cooking></Cooking>
+          <Recipes handleAddToCook={handleAddToCook}></Recipes>
+          <Cooking cookItem={cookItem}></Cooking>
         </div>
       </div>
 

@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import RecipesUI from './RecipesUI';
 
-const Recipes = () => {
+const Recipes = ({handleAddToCook}) => {
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const Recipes = () => {
     return (
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
             {
-                recipes.map(reci => <RecipesUI key={reci.recipe_id} recipe={reci}></RecipesUI>)
+                recipes.map(reci => <RecipesUI key={reci.recipe_id} recipe={reci} handleAddToCook={handleAddToCook}></RecipesUI>)
             }
         </div>
     );

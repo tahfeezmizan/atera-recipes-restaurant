@@ -1,5 +1,5 @@
 
-const RecipesUI = ({ recipe }) => {
+const RecipesUI = ({ recipe, handleAddToCook }) => {
     const { recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = recipe;
     return (
         <div>
@@ -37,8 +37,7 @@ const RecipesUI = ({ recipe }) => {
                                 <p className="fira-sans text-base text-gray-400">{calories} calories</p>
                             </div>
                         </div>
-                        <button className="btn rounded-3xl px-6 border-none bg-green-400 text-lg font-medium"><a
-                        >Explore Now</a></button>
+                        <button onClick={() => handleAddToCook(recipe)} className="btn rounded-3xl px-6 border-none bg-green-400 text-lg font-medium">Want to Cook</button>
                     </div>
                 </div>
             </div>
