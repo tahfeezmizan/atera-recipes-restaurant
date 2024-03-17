@@ -8,6 +8,7 @@ const SingleRecipe = ({ cookItem, idx, handleCurrentlyCooking, preparingBtn }) =
             <td>{recipe_name}</td>
             <td>{preparing_time} minutes</td>
             <td>{calories} calories</td>
+
             {preparingBtn &&
                 <td>
                     <button onClick={() => handleCurrentlyCooking(cookItem)} className="btn rounded-3xl px-4 border-none bg-green-400 text-base font-medium">Preparing</button>

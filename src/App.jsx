@@ -31,16 +31,15 @@ function App() {
       <Banner></Banner>
       <RecipesTitle></RecipesTitle>
 
-      <div className="w-full lg:w-11/12 xl:w-8/12 mx-auto px-4 md:px-6 lg:px-0">
+      <div className="w-full lg:w-11/12 xl:w-8/12 mx-auto px-4 md:px-6 lg:px-0 pb-20">
 
         <div className="grid md:grid-cols-5 gap-6">
+
           <div className="md:col-span-3">
             <Recipes handleAddToCook={handleAddToCook}></Recipes>
           </div>
-
           <div className="md:col-span-2">
-            <Cooking key={cookItem.recipe_id} cookItem={cookItem}></Cooking>
-            <Currentlycooking></Currentlycooking>
+            <Cooking key={cookItem.recipe_id} cookItem={cookItem} setCookItem={setCookItem}></Cooking>
           </div>
         </div>
       </div>

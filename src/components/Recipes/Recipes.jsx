@@ -10,7 +10,7 @@ const Recipes = ({handleAddToCook}) => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setRecipes(data))
-    }, [])
+    }, []);
 
     return (
         <div className='grid md:grid-cols-2 gap-6'>
