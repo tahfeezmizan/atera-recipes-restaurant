@@ -8,6 +8,7 @@ import RecipesTitle from './components/Recipes/RecipesTitle'
 import RecipesUI from './components/Recipes/RecipesUI'
 import Currentlycooking from './components/Recipes/Currentlycooking';
 import toast from 'react-hot-toast';
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -43,6 +44,8 @@ function App() {
           </div>
         </div>
       </div>
+
+      <Footer></Footer>
 
     </>
   )
