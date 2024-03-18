@@ -1,4 +1,5 @@
 
+
 const Header = () => {
     return (
         <div>
@@ -23,7 +24,7 @@ const Header = () => {
                             </div>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-3xl font-bold">Atera Recipe</a>
+                    <a className="btn btn-ghost text-3xl font-bold lexend">Atera <span className="text-green-600">Recipe</span></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-10">

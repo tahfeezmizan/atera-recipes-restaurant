@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 
 body {
-  font-family: "Lexend", sans-serif;
+  font-family: "Lexend", sans-serif !important;
 }
 
 .fira-sans {
