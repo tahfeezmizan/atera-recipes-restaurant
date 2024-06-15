@@ -3,9 +3,6 @@ const RecipesUI = ({ recipe, handleAddToCook }) => {
     const { recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = recipe;
 
     return (
-        // <div className="flex gap-6">
-
-        // </div>
         <div className="w-full bg-white border border-gray-200 rounded-xl">
             <img src={recipe_image} alt="Shoes" className="rounded-[2.5rem] p-6 w-full" />
             <div className="px-6 pb-6">
